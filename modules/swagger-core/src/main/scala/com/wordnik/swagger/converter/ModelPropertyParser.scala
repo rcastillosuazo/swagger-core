@@ -228,8 +228,8 @@ class ModelPropertyParser(cls: Class[_]) (implicit properties: LinkedHashMap[Str
           isXmlElement = true
         }
         case e: XmlElement => {
-          updatedName = readString(e.name, name, "##default")
-          updatedName = readString(name, name)
+       //   updatedName = readString(e.name, name, "##default")
+          updatedName = readString(e.name, name)
           defaultValue = readString(e.defaultValue, defaultValue, "\u0000")
 
           required = e.required
